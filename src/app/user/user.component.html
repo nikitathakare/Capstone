@@ -1,0 +1,82 @@
+<div class="row justify-content-center" style="margin-top: 2%;">
+    <h2>** Welcome to MedLife HealthCare **</h2>
+</div>
+<div class="container-fluid">
+   
+    
+        <div class="row justify-content-center">
+        <div class="card text-white bg-primary" style="width: 25%;margin-top: 6%;">
+            <div class="card-header">
+              Login Here
+            </div>
+            <div class="card-body">
+                <div class="row justify-content-center">
+                 <form (ngSubmit)="onClickSubmit()">
+                    <div class="form-floating mb-3">
+                    <div class="form-grop">
+                    <label for="floatingInput">userName </label>
+                    <input
+                type="text"
+                name="userName"
+                id="userName"
+                class="form-control"
+              
+                [(ngModel)]="user.userName"
+                required
+               
+                      />
+                      </div>
+                </div>
+                <div class="form-floating mb-3">
+                    <div class="form-grop">
+                    <label for="floatingInput">Password </label>
+                    <input
+                type="text"
+                name="password"
+                id="password"
+                class="form-control"
+              
+                [(ngModel)]="user.password"
+                required/>
+                </div>
+                      </div>
+              <div class="form-floating mb-3">
+                <div class="form-grop">
+                <label for="floatingInput">Role </label>
+                <input
+            type="text"
+            name="role"
+            id="role"
+            class="form-control"
+            name="role"
+            [(ngModel)]="user.role"
+            
+                  />
+                  </div>
+            </div>
+                <!-- <div class="form-floating">
+                    <input type="password" class="form-control"  id="floatingPassword" placeholder="Password" ngModel name="password">
+                    <label for="floatingInput">Password</label>
+                </div>
+                <div class="form-floting">
+                    <select class="form-selelct" id="floatingSelect" aria-label="Floating label" name="role" ngModel placeholder="role">
+                        <option *ngFor="let r of roles"[value]="r">{{r}}</option>
+                        
+                        
+                    </select>
+                    <label for="floatingSelect">Works with selects</label>
+                </div> -->
+                <button class="btn btn-success me-md-2" type="submit">LogIN</button>
+
+            </form>
+            </div>
+            </div>
+        
+        </div>
+        </div>
+        
+
+        
+    </div>
+
+    

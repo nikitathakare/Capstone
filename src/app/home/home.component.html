@@ -1,0 +1,40 @@
+<app-header></app-header>
+<div class="container">
+    <div class="row justify-content-start">
+        
+            <div class="col-3">
+                 Search : <input type="text" placeholder="search Item" 
+                 [(ngModel)]="searchedKeyword">
+            </div>
+             <div class="col-3">
+                <select class="form-control" >  
+                    <option> <label for="website">Filter By:</label> Recommended</option>  
+                    <option (click)='filterAsc()'>Low Price</option>
+                    <option><label for="website">Filter By:</label>High Price</option>  
+                </select>
+            </div>
+   
+      
+    </div>
+</div>
+
+<ul class="list-inline">
+    <li class="list-inline-item" *ngFor="let food of medicine| filter:searchedKeyword">
+        <div class="card" style="width: 18rem;">
+            
+        </div>
+        
+        <div class="card-body">
+            <img [src]="food.productUrl" [alt]="food.name">
+            <p>Id :{{food.id}}</p>
+            <h5>Name :{{food.name}}</h5>
+            <h6> Description : {{food.description}}</h6>
+            <h5>Price : {{food.price}}</h5>
+            <button (click)='addToCart(food)'>Add To Cart</button>
+        </div>
+    
+    </li>
+</ul>
+
+
+
